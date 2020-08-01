@@ -23,6 +23,7 @@ class HeadsOrTails {
 
     /* print result */
     print('Heads: $_heads, Tails: $_tails');
+    print('You ${_heads > _tails ? 'won' : 'lost'}');
   }
 }
 
