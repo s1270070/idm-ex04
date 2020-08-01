@@ -4,8 +4,9 @@ import 'dart:math';
 class HeadsOrTails {
   int _heads = 0;
   int _tails = 0;
+  String _userName;
 
-  HeadsOrTails();
+  HeadsOrTails(this._userName);
 
   String _round() {
     final result = Random().nextBool();
@@ -24,7 +25,7 @@ class HeadsOrTails {
 
     /* print result */
     print('Heads: $_heads, Tails: $_tails');
-    print('You ${_heads > _tails ? 'won' : 'lost'}');
+    print('$_userName ${_heads > _tails ? 'won' : 'lost'}!');
   }
 }
 
@@ -33,6 +34,6 @@ main() {
   String name = stdin.readLineSync();
   print('Hello, $name!');
 
-  final game = HeadsOrTails();
+  final game = HeadsOrTails(name);
   game.app();
 }
