@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 class HeadsOrTails {
@@ -27,6 +28,10 @@ class HeadsOrTails {
 }
 
 main() {
+  stdout.write("Who are you?\n> ");
+  String name = stdin.readLineSync();
+  print('Hello, $name!');
+
   final game = HeadsOrTails();
   game.app();
 }
